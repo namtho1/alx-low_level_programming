@@ -1,2 +1,2 @@
 #!/bin/bash
-cpp -P -o c "$CFILE"
+echo -e "#include <stdio.h>\nint main(void) { printf(\"Hello, world!\\n\"); return 0; }" | cpp -P -o c
