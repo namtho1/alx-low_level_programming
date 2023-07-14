@@ -1,4 +1,5 @@
 #!/bin/bash
-gcc -E -P -o c "$CFILE"
+gcc -E -P -o c $CFILE
+
 
 
