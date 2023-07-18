@@ -1,3 +1,8 @@
+/* 0-putchar.c
+ *
+ * Description: Entry point of the program that demonstrates the usage of the _putchar function.
+ * The program outputs the string "_putchar" followed by a newline character to the standard output.
+ */
 #include <stdio.h>
 #include "main.h"
 
