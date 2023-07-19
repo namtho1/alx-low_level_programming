@@ -12,7 +12,7 @@ int main(void)
 
 	i = 0;
 
-	/* Commented out the infinite loop to fix the issue */
+	
 	/*
 	 * while (i < 10)
 	 * {
