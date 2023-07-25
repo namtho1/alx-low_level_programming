@@ -17,7 +17,7 @@ char *_strcpy(char *dest, char *src)
         i++;
     }
 
-    dest[i] = '\0'; // Add the null terminator at the end of the copied string
+    dest[i] = '\0'; /* Add the null terminator at the end of the copied string */
 
     return dest;
 }
