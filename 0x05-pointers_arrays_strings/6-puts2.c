@@ -5,18 +5,20 @@
  * @str: The string to be printed.
  *
  * Description: This function takes a string as input and prints every other
- * character of the string, starting with the first character, followed by
- * a new line character.
+ * printable character of the string, starting with the first printable
+ * character, followed by a new line character.
  */
 void puts2(char *str)
 {
-	int i = 0;
+    int i = 0;
 
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i += 2;
-	}
+    while (str[i] != '\0')
+    {
+        if (str[i] >= 32 && str[i] <= 126) // Check if the character is printable
+            _putchar(str[i]);
 
-	_putchar('\n');
+        i += 2;
+    }
+
+    _putchar('\n');
 }
