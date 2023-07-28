@@ -1,0 +1,38 @@
+/**
+ * cap_string - Capitalizes all words of a string.
+ * @str: String parameter.
+ *
+ * Return: Pointer to the resulting string.
+ */
+char *cap_string(char *str)
+{
+	int i = 0;
+
+	/* Capitalize the first character of the string */
+	if (str[i] >= 'a' && str[i] <= 'z')
+	{
+		str[i] -= ('a' - 'A');
+	}
+
+	/* Iterate through the rest of the string */
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+			str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+			str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+			str[i] == '(' || str[i] == ')' || str[i] == '{' ||
+			str[i] == '}')
+		{
+			/* If the current char is a separator,set next character to uppercase */
+			i++;
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] -= ('a' - 'A');
+			}
+		}
+
+		i++;
+	}
+
+	return (str);
+}
