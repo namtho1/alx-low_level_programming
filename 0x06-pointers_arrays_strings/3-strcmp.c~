@@ -1,0 +1,32 @@
+/**
+ * _strcmp - Compares two strings.
+ * @s1: First string to compare.
+ * @s2: Second string to compare.
+ *
+ * Return: An integer less than, equal to, or greater than zero if s1 is found,
+ * respectively, to be less than, to match, or be greater than s2.
+ */
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s1 < *s2)
+			return -1;
+		else if (*s1 > *s2)
+			return 1;
+
+		// Move to the next character in both strings
+		s1++;
+		s2++;
+	}
+
+	// Check if both strings have reached their end (are equal)
+	if (*s1 == '\0' && *s2 == '\0')
+		return 0;
+
+	// If only one string has reached its end, determine the result
+	if (*s1 == '\0')
+		return -1; // s1 is shorter (comes before) s2
+	else
+		return 1; // s1 is longer (comes after) s2
+}
