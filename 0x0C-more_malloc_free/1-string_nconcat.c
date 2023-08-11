@@ -1,17 +1,20 @@
+#include <stddef.h>  /* For NULL */
+#include <stdlib.h>  /* For malloc */
+
 /**
-* string_nconcat - concatenates two strings.
+* string_nconcat - conicatenates two strings.
 * @s1: string 1
 * @s2: string 2
-* @n: bytes of s2
+* @n: number of bytes of s2
 *
 * Return: point to a newly allocated space in memory,
-*         which contains s1, followed by the first n bytes of s2
-*         , and null terminated
+*         which contains s1, followed by the first n
+*         bytes of s2, and null terminated
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *s;
-int length1 = 0, i, j;
+unsigned int length1 = 0, i, j;
 
 if (s1 == NULL)
 s1 = "";
@@ -32,3 +35,4 @@ s[i] = '\0';
 
 return (s);
 }
+
