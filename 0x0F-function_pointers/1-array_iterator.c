@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * array_iterator - Executes action on each element of an integer array.
  * @array: Pointer to the integer array.
@@ -8,7 +10,8 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-for (size_t i = 0; i < size; i++)
+size_t i;
+for (i = 0; i < size; i++)
 {
 action(array[i]);
 }
