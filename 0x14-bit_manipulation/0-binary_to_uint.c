@@ -11,7 +11,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int result = 0;
-unsigned int power = 1;
+unsigned int bit_value = 1;
 int index = 0;
 
 if (b == NULL)
@@ -25,9 +25,9 @@ while (--index >= 0)
 if (b[index] != '0' && b[index] != '1')
 return (0);
 
-result += (b[index] - '0') * power;
-power *= 2;
+result += (b[index] - '0') * bit_value;
+bit_value *= 2;
 }
 
 return (result);
-
+}
